@@ -1,0 +1,47 @@
+Estrutura JSON para a entidade "Cliente":
+
+{
+  "_id": "1",
+  "nome": "João da Silva",
+  "endereco": "Rua A, 123",
+  "telefone": "9999-9999"
+}
+
+
+Estrutura JSON para a entidade "Pizza":
+
+{
+  "_id": "1",
+  "nome": "Calabresa",
+  "tamanho": "Média",
+  "preco": 29.99
+}
+
+Estrutura JSON para a entidade "Bebida":
+{
+  "_id": "1",
+  "nome": "Coca-Cola",
+  "preco": 5.99
+}
+
+Estrutura JSON para a entidade "Pedido":
+{
+  "_id": "1",
+  "cliente_id": "1",
+  "tipo": "entrega",
+  "mesa": null,
+  "endereco": "Rua A, 123",
+  "data_hora": "2023-06-27T18:30:00",
+  "itens": [
+    {
+      "item_id": "1",
+      "tipo": "pizza",
+      "quantidade": 2
+    },
+    {
+      "item_id": "1",
+      "tipo": "bebida",
+      "quantidade": 3
+    }
+  ]
+}

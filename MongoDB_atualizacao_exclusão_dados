@@ -1,0 +1,35 @@
+mongodb
+
+atualizações e exclusoes de dados:
+
+db.clientes.updateOne(
+  { "_id": "1" },
+  { $set: { "endereco": "Nova Rua, 456", "telefone": "8888-8888" } }
+)
+
+db.pizzas.updateOne(
+  { "_id": "1" },
+  { $set: { "preco": 34.99 } }
+)
+
+db.bebidas.updateOne(
+  { "_id": "1" },
+  { $set: { "preco": 6.99 } }
+)
+
+db.pedidos.updateOne(
+  { "_id": "1" },
+  { $set: { "tipo": "comer no local", "mesa": 5 } }
+)
+
+db.clientes.deleteOne({ "_id": "1" })
+
+db.pizzas.deleteOne({ "_id": "1" })
+
+db.bebidas.deleteOne({ "_id": "1" })
+
+db.pedidos.deleteOne({ "_id": "1" })
+
+
+
+

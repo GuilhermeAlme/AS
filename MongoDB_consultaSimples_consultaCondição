@@ -1,0 +1,24 @@
+MongoDB_consultaSimples_consultaCondição
+
+db.clientes.find({})
+
+
+db.pizzas.find({})
+
+
+db.bebidas.find({})
+
+
+db.pedidos.find({})
+
+
+db.clientes.findOne({ "_id": "1" })
+
+
+db.pizzas.find({ "preco": { $lt: 30 } })
+
+
+db.bebidas.find({ "preco": 5.99 })
+
+db.pedidos.find({ "data_hora": { $gt: ISODate("2023-06-27T12:00:00") } })
+

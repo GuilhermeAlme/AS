@@ -1,0 +1,22 @@
+MongoDB_Aggregate_join_groupby
+
+db.pedidos.aggregate([
+  {
+    $lookup: {
+      from: "clientes",
+      localField: "cliente_id",
+      foreignField: "_id",
+      as: "cliente"
+    }
+  }
+])
+
+
+db.pedidos.aggregate([
+  {
+    $group: {
+      _id: "$tipo",
+      totalPedidos: { $sum: 1 }
+    }
+  }
+])

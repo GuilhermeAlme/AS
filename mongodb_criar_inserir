@@ -1,0 +1,48 @@
+mongodb
+omandos MongoDB para criar as coleçoes e inserir os dados.
+
+
+db.clientes.insertOne({
+  "_id": "1",
+  "nome": "João da Silva",
+  "endereco": "Rua A, 123",
+  "telefone": "9999-9999"
+})
+
+
+db.pizzas.insertOne({
+  "_id": "1",
+  "nome": "Calabresa",
+  "tamanho": "Média",
+  "preco": 29.99
+})
+
+
+db.bebidas.insertOne({
+  "_id": "1",
+  "nome": "Coca-Cola",
+  "preco": 5.99
+})
+
+db.pedidos.insertOne({
+  "_id": "1",
+  "cliente_id": "1",
+  "tipo": "entrega",
+  "mesa": null,
+  "endereco": "Rua A, 123",
+  "data_hora": ISODate("2023-06-27T18:30:00"),
+  "itens": [
+    {
+      "item_id": "1",
+      "tipo": "pizza",
+      "quantidade": 2
+    },
+    {
+      "item_id": "1",
+      "tipo": "bebida",
+      "quantidade": 3
+    }
+  ]
+})
+
+
